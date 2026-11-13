@@ -26,6 +26,18 @@ The app is not signed. On macOS 15 and later: try to open it, then System Settin
 
 `.github/workflows/macos.yml` builds a universal app (arm64 + x86_64), runs the tests and stores `AnimatorChoreographer-macOS.zip` as an artifact.
 
+## Linux
+
+Packages for x86_64 (built on Ubuntu 22.04, glibc 2.35 or newer): `animator-choreographer_<version>_amd64.deb` and `animator-choreographer-<version>-linux-x86_64.tar.gz`.
+
+```sh
+sudo apt install ./animator-choreographer_0.1.0_amd64.deb   # installs /usr/bin/animator-choreographer
+```
+
+The REAPER script is installed to `/usr/share/animator-choreographer/`; copy it to `~/.config/REAPER/Scripts/Animator/`. The `.tar.gz` contains the program, script, icon, `.desktop` file and `INSTALL.txt`.
+
+Building: `sudo apt install cmake ninja-build libx11-dev libxrandr-dev libxinerama-dev libxcursor-dev libxext-dev libfreetype-dev libfontconfig1-dev libasound2-dev libgl1-mesa-dev`, then `cmake -B build -G Ninja -DCMAKE_BUILD_TYPE=Release && cmake --build build` and `installer/make-linux-packages.sh build dist`. `.github/workflows/linux.yml` does the same, checks installation and start without a display, and attaches the packages to a release.
+
 ## Usage
 
 - Export XML: file dialog, suggested path `~/Documents/<title>.xml`. After saving, a confirmation with the path and "Show in Finder" appears. If the plan has errors, the app jumps to step 5.
@@ -122,6 +134,18 @@ Die App ist nicht signiert. Ab macOS 15: App öffnen, Meldung schliessen, dann S
 ### GitHub Actions
 
 `.github/workflows/macos.yml` baut eine Universal-App (arm64 + x86_64), führt die Tests aus und legt `AnimatorChoreographer-macOS.zip` als Artefakt ab.
+
+## Linux
+
+Pakete für x86_64 (gebaut auf Ubuntu 22.04, glibc 2.35 oder neuer): `animator-choreographer_<version>_amd64.deb` und `animator-choreographer-<version>-linux-x86_64.tar.gz`.
+
+```sh
+sudo apt install ./animator-choreographer_0.1.0_amd64.deb   # installiert /usr/bin/animator-choreographer
+```
+
+Das REAPER-Skript liegt danach unter `/usr/share/animator-choreographer/`; nach `~/.config/REAPER/Scripts/Animator/` kopieren. Das `.tar.gz` enthält Programm, Skript, Icon, `.desktop`-Datei und `INSTALL.txt`.
+
+Bauen: `sudo apt install cmake ninja-build libx11-dev libxrandr-dev libxinerama-dev libxcursor-dev libxext-dev libfreetype-dev libfontconfig1-dev libasound2-dev libgl1-mesa-dev`, dann `cmake -B build -G Ninja -DCMAKE_BUILD_TYPE=Release && cmake --build build` und `installer/make-linux-packages.sh build dist`. `.github/workflows/linux.yml` macht dasselbe, prüft Installation und Start ohne Bildschirm und hängt die Pakete an ein Release an.
 
 ## Bedienung
 
