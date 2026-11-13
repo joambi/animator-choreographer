@@ -11,6 +11,11 @@ on:
         description: "Dateien an dieses Release anhängen (z. B. v0.1.0, auch Entwurf); leer = nur bauen"
         required: false
         default: ""
+      overwrite:
+        description: "Vorhandene Dateien im Release ersetzen (Prüfsummen ändern sich)"
+        type: boolean
+        required: false
+        default: false
 
 jobs:
   build:
@@ -78,4 +83,16 @@ jobs:
         env:
           GH_TOKEN: ${{ github.token }}
           TAG: ${{ github.event.release.tag_name || inputs.release_tag }}
-        run: gh release upload $env:TAG "dist\Animator-Choreographer-$env:VER-Windows-Setup.exe" "dist\Animator-Choreographer-$env:VER-Windows-portable.zip" --clobber
+          OVERWRITE: ${{ inputs.overwrite }}
+        # Vorhandene Dateien bleiben unverändert (sonst stimmen SHA256SUMS.txt und Release-Text nicht mehr),
+        # ausser bei manuellem Start mit overwrite = true.
+        run: |
+          $have = gh release view $env:TAG --json assets -q '.assets[].name'
+          foreach ($n in @("Animator-Choreographer-$env:VER-Windows-Setup.exe", "Animator-Choreographer-$env:VER-Windows-portable.zip")) {
+            if (($have -contains $n) -and ($env:OVERWRITE -ne 'true')) {
+              Write-Host "Bereits im Release, nicht ersetzt: $n"
+            } else {
+              gh release upload $env:TAG "dist\$n" --clobber
+              if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
+            }
+          }
