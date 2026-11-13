@@ -1,3 +1,31 @@
+Animator Choreographer — Copyright (C) 2026 Johannes Schütt, ICST – Institute
+for Computer Music and Sound Technology, Zurich University of the Arts (ZHdK)
+
+This program is free software: you can redistribute it and/or modify it under
+the terms of the GNU General Public License as published by the Free Software
+Foundation, version 3 of the License.
+
+This program is distributed in the hope that it will be useful, but WITHOUT ANY
+WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A
+PARTICULAR PURPOSE. See the GNU General Public License below for more details.
+
+Entstehung / Authorship
+-----------------------
+Konzept, Gestaltung der Arbeitsschritte, Prüfung in REAPER und Verantwortung
+für den Inhalt: Johannes Schütt. Mit KI-Assistenz entstanden: Claude
+(Anthropic) bei Programmierung und Dokumentation; Perplexity Computer bei
+Repository, Build-Abläufen (GitHub Actions), Paketierung und Release-Text.
+
+Concept, design of the workflow, testing in REAPER and responsibility for the
+content: Johannes Schütt. Written with AI assistance: Claude (Anthropic) for
+code and documentation; Perplexity Computer for repository, CI (GitHub
+Actions), packaging and release notes.
+
+Third-party parts: third_party/icst (ICST Ambisonics Plugins, GPL-3.0,
+tag 3.2.0.9); Resources/Fonts (Inter, JetBrains Mono, SIL Open Font License 1.1).
+
+=======================================================================
+
                     GNU GENERAL PUBLIC LICENSE
                        Version 3, 29 June 2007
 
