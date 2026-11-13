@@ -11,6 +11,11 @@ on:
         description: "Pakete an dieses Release anhängen (z. B. v0.1.0, auch Entwurf); leer = nur bauen"
         required: false
         default: ""
+      overwrite:
+        description: "Vorhandene Dateien im Release ersetzen (Prüfsummen ändern sich)"
+        type: boolean
+        required: false
+        default: false
 
 jobs:
   build:
@@ -60,4 +65,16 @@ jobs:
         env:
           GH_TOKEN: ${{ github.token }}
           TAG: ${{ github.event.release.tag_name || inputs.release_tag }}
-        run: gh release upload "$TAG" dist/*.tar.gz dist/*.deb --clobber
+          OVERWRITE: ${{ inputs.overwrite }}
+        # Vorhandene Dateien bleiben unverändert (sonst stimmen SHA256SUMS.txt und Release-Text nicht mehr),
+        # ausser bei manuellem Start mit overwrite = true.
+        run: |
+          have="$(gh release view "$TAG" --json assets -q '.assets[].name')"
+          for f in dist/*.tar.gz dist/*.deb; do
+            n="$(basename "$f")"
+            if printf '%s\n' "$have" | grep -qxF "$n" && [ "$OVERWRITE" != "true" ]; then
+              echo "Bereits im Release, nicht ersetzt: $n"
+            else
+              gh release upload "$TAG" "$f" --clobber
+            fi
+          done
