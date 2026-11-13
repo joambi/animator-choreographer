@@ -1,0 +1,33 @@
+name: macOS-Build
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: macos-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Konfigurieren (JUCE 8.0.12 per FetchContent)
+        run: cmake -B build -G Xcode -DCMAKE_OSX_ARCHITECTURES="arm64;x86_64"
+
+      - name: Bauen
+        run: cmake --build build --config Release --parallel
+
+      - name: Tests
+        run: |
+          TESTS=$(find build -type f -name ChoreoTests -perm -u+x | head -1)
+          "$TESTS" build/test-out tests/data/test-gp.xml
+
+      - name: App packen
+        run: |
+          APP=$(find build -type d -name Raumchoreographie.app -path '*Release*' | head -1)
+          ditto -c -k --keepParent "$APP" Raumchoreographie-macOS.zip
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: Raumchoreographie-macOS
+          path: Raumchoreographie-macOS.zip

@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<AnimatorTimelines distanceScaler="4.100000000000001">
+  <Timeline>
+    <MovementLayer>
+      <MovementClip id="Move Left" start="1400" length="1400" colour="ffff4500" muted="0"
+                    palindrome="0" repetitions="1" easingEnabled="0" easeX1="0.3333333333333333"
+                    easeY1="0.3333333333333333" easeX2="0.6666666666666666" easeY2="0.6666666666666666"
+                    easePerRepetition="1" easePerDirection="1" movementType="0" startPointGroupX="0.0"
+                    startPointGroupY="0.0" startPointGroupZ="0.0" targetPointGroupX="-4.0"
+                    targetPointGroupY="0.0" targetPointGroupZ="0.0" useStartPoint="0"
+                    count="1.0" radiusChange="0.0" tension="0.0" closedPath="0" heightRise="0.0"
+                    freqRatioA="3.0" freqRatioB="2.0" phaseDeg="0.0" randomSeed="1"/>
+      <MovementClip id="Return Center" start="3000" length="1000" colour="ffdaa520"
+                    muted="0" palindrome="0" repetitions="1" easingEnabled="0" easeX1="0.3333333333333333"
+                    easeY1="0.3333333333333333" easeX2="0.6666666666666666" easeY2="0.6666666666666666"
+                    easePerRepetition="1" easePerDirection="1" movementType="0" startPointGroupX="0.0"
+                    startPointGroupY="0.0" startPointGroupZ="0.0" targetPointGroupX="0.0"
+                    targetPointGroupY="0.0" targetPointGroupZ="0.0" useStartPoint="0"
+                    count="1.0" radiusChange="0.0" tension="0.0" closedPath="0" heightRise="0.0"
+                    freqRatioA="3.0" freqRatioB="2.0" phaseDeg="0.0" randomSeed="1"/>
+    </MovementLayer>
+    <ActionLayer name="">
+      <ActionClip id="Rotate Full Circle" start="0" length="2000" colour="ff6a5acd"
+                  muted="0" palindrome="0" repetitions="1" easingEnabled="0" easeX1="0.3333333333333333"
+                  easeY1="0.3333333333333333" easeX2="0.6666666666666666" easeY2="0.6666666666666666"
+                  easePerRepetition="1" easePerDirection="1">
+        <Actions>
+          <Action actionType="3" timingType="3" value="180.0" startValue="0.0"
+                  useStartValue="1" jitterSpeed="1.0"/>
+        </Actions>
+      </ActionClip>
+      <ActionClip id="Grow" start="2200" length="1000" colour="ff3cb371" muted="0"
+                  palindrome="0" repetitions="1" easingEnabled="0" easeX1="0.3333333333333333"
+                  easeY1="0.3333333333333333" easeX2="0.6666666666666666" easeY2="0.6666666666666666"
+                  easePerRepetition="1" easePerDirection="1">
+        <Actions>
+          <Action actionType="4" timingType="2" value="1.0" startValue="1.0" useStartValue="1"
+                  jitterSpeed="1.0"/>
+        </Actions>
+      </ActionClip>
+      <ActionClip id="Shrink" start="3300" length="900" colour="ff2e8b57" muted="0"
+                  palindrome="0" repetitions="1" easingEnabled="0" easeX1="0.3333333333333333"
+                  easeY1="0.3333333333333333" easeX2="0.6666666666666666" easeY2="0.6666666666666666"
+                  easePerRepetition="1" easePerDirection="1">
+        <Actions>
+          <Action actionType="4" timingType="2" value="-0.5" startValue="0.0" useStartValue="0"
+                  jitterSpeed="1.0"/>
+        </Actions>
+      </ActionClip>
+    </ActionLayer>
+  </Timeline>
+  <Timeline>
+    <MovementLayer>
+      <MovementClip id="Circle Orbit" start="0" length="3000" colour="ff6495ed" muted="0"
+                    palindrome="0" repetitions="1" easingEnabled="0" easeX1="0.3333333333333333"
+                    easeY1="0.3333333333333333" easeX2="0.6666666666666666" easeY2="0.6666666666666666"
+                    easePerRepetition="1" easePerDirection="1" movementType="2" startPointGroupX="3.0"
+                    startPointGroupY="0.0" startPointGroupZ="0.0" targetPointGroupX="0.0"
+                    targetPointGroupY="0.0" targetPointGroupZ="0.0" useStartPoint="1"
+                    count="1.0" radiusChange="0.0" tension="0.0" closedPath="0" heightRise="0.0"
+                    freqRatioA="3.0" freqRatioB="2.0" phaseDeg="0.0" randomSeed="1"/>
+      <MovementClip id="Spiral Outward" start="3200" length="3000" colour="ff4169e1"
+                    muted="0" palindrome="0" repetitions="1" easingEnabled="0" easeX1="0.3333333333333333"
+                    easeY1="0.3333333333333333" easeX2="0.6666666666666666" easeY2="0.6666666666666666"
+                    easePerRepetition="1" easePerDirection="1" movementType="3" startPointGroupX="0.0"
+                    startPointGroupY="0.0" startPointGroupZ="0.0" targetPointGroupX="0.0"
+                    targetPointGroupY="0.0" targetPointGroupZ="0.0" useStartPoint="0"
+                    count="2.0" radiusChange="1.0" tension="0.0" closedPath="0" heightRise="0.0"
+                    freqRatioA="3.0" freqRatioB="2.0" phaseDeg="0.0" randomSeed="1"/>
+    </MovementLayer>
+    <ActionLayer name="">
+      <ActionClip id="Tilt Up" start="0" length="3000" colour="ff3cb371" muted="0"
+                  palindrome="0" repetitions="1" easingEnabled="0" easeX1="0.3333333333333333"
+                  easeY1="0.3333333333333333" easeX2="0.6666666666666666" easeY2="0.6666666666666666"
+                  easePerRepetition="1" easePerDirection="1">
+        <Actions>
+          <Action actionType="1" timingType="2" value="45.0" startValue="0.0" useStartValue="1"
+                  jitterSpeed="1.0"/>
+        </Actions>
+      </ActionClip>
+      <ActionClip id="Grow While Spiraling" start="3200" length="3000" colour="ff2e8b57"
+                  muted="0" palindrome="0" repetitions="1" easingEnabled="0" easeX1="0.3333333333333333"
+                  easeY1="0.3333333333333333" easeX2="0.6666666666666666" easeY2="0.6666666666666666"
+                  easePerRepetition="1" easePerDirection="1">
+        <Actions>
+          <Action actionType="4" timingType="3" value="0.3" startValue="1.0" useStartValue="1"
+                  jitterSpeed="1.0"/>
+        </Actions>
+      </ActionClip>
+    </ActionLayer>
+  </Timeline>
+  <Timeline>
+    <MovementLayer>
+      <MovementClip id="Arc Move (Polar)" start="0" length="2000" colour="ff800080"
+                    muted="0" palindrome="0" repetitions="1" easingEnabled="0" easeX1="0.3333333333333333"
+                    easeY1="0.3333333333333333" easeX2="0.6666666666666666" easeY2="0.6666666666666666"
+                    easePerRepetition="1" easePerDirection="1" movementType="1" startPointGroupX="0.0"
+                    startPointGroupY="3.0" startPointGroupZ="0.0" targetPointGroupX="3.0"
+                    targetPointGroupY="0.0" targetPointGroupZ="0.0" useStartPoint="1"
+                    count="1.0" radiusChange="0.0" tension="0.0" closedPath="0" heightRise="0.0"
+                    freqRatioA="3.0" freqRatioB="2.0" phaseDeg="0.0" randomSeed="1"/>
+      <MovementClip id="Return (Cartesian)" start="2200" length="1500" colour="ff9932cc"
+                    muted="0" palindrome="0" repetitions="1" easingEnabled="0" easeX1="0.3333333333333333"
+                    easeY1="0.3333333333333333" easeX2="0.6666666666666666" easeY2="0.6666666666666666"
+                    easePerRepetition="1" easePerDirection="1" movementType="0" startPointGroupX="0.0"
+                    startPointGroupY="0.0" startPointGroupZ="0.0" targetPointGroupX="0.0"
+                    targetPointGroupY="3.0" targetPointGroupZ="0.0" useStartPoint="0"
+                    count="1.0" radiusChange="0.0" tension="0.0" closedPath="0" heightRise="0.0"
+                    freqRatioA="3.0" freqRatioB="2.0" phaseDeg="0.0" randomSeed="1"/>
+    </MovementLayer>
+    <ActionLayer name="">
+      <ActionClip id="Rotate To 90 (Absolute)" start="0" length="2000" colour="ffffd700"
+                  muted="0" palindrome="0" repetitions="1" easingEnabled="0" easeX1="0.3333333333333333"
+                  easeY1="0.3333333333333333" easeX2="0.6666666666666666" easeY2="0.6666666666666666"
+                  easePerRepetition="1" easePerDirection="1">
+        <Actions>
+          <Action actionType="2" timingType="1" value="90.0" startValue="0.0" useStartValue="1"
+                  jitterSpeed="1.0"/>
+        </Actions>
+      </ActionClip>
+      <ActionClip id="Rotate 45 More (Relative)" start="2200" length="1500" colour="ffbdb76b"
+                  muted="0" palindrome="0" repetitions="1" easingEnabled="0" easeX1="0.3333333333333333"
+                  easeY1="0.3333333333333333" easeX2="0.6666666666666666" easeY2="0.6666666666666666"
+                  easePerRepetition="1" easePerDirection="1">
+        <Actions>
+          <Action actionType="2" timingType="2" value="45.0" startValue="0.0" useStartValue="0"
+                  jitterSpeed="1.0"/>
+        </Actions>
+      </ActionClip>
+      <ActionClip id="Stretch (Constant/s)" start="3800" length="1500" colour="ffadd8e6"
+                  muted="0" palindrome="0" repetitions="1" easingEnabled="0" easeX1="0.3333333333333333"
+                  easeY1="0.3333333333333333" easeX2="0.6666666666666666" easeY2="0.6666666666666666"
+                  easePerRepetition="1" easePerDirection="1">
+        <Actions>
+          <Action actionType="4" timingType="3" value="0.4" startValue="1.0" useStartValue="1"
+                  jitterSpeed="1.0"/>
+        </Actions>
+      </ActionClip>
+    </ActionLayer>
+  </Timeline>
+  <Timeline>
+    <MovementLayer>
+      <MovementClip id="Complex Spiral" start="210" length="3000" colour="ff008080"
+                    muted="0" palindrome="0" repetitions="1" easingEnabled="0" easeX1="0.3333333333333333"
+                    easeY1="0.3333333333333333" easeX2="0.6666666666666666" easeY2="0.6666666666666666"
+                    easePerRepetition="1" easePerDirection="1" movementType="3" startPointGroupX="2.0"
+                    startPointGroupY="0.0" startPointGroupZ="0.0" targetPointGroupX="0.0"
+                    targetPointGroupY="0.0" targetPointGroupZ="0.0" useStartPoint="1"
+                    count="1.5" radiusChange="-0.5" tension="0.0" closedPath="0"
+                    heightRise="0.0" freqRatioA="3.0" freqRatioB="2.0" phaseDeg="0.0"
+                    randomSeed="1"/>
+    </MovementLayer>
+    <ActionLayer name="">
+      <ActionClip id="3D Rotation" start="500" length="1000" colour="ffffa500"
+                  muted="0" palindrome="0" repetitions="1" easingEnabled="0" easeX1="0.3333333333333333"
+                  easeY1="0.3333333333333333" easeX2="0.6666666666666666" easeY2="0.6666666666666666"
+                  easePerRepetition="1" easePerDirection="1">
+        <Actions>
+          <Action actionType="1" timingType="1" value="45.0" startValue="0.0" useStartValue="1"
+                  jitterSpeed="1.0"/>
+          <Action actionType="2" timingType="2" value="90.0" startValue="0.0" useStartValue="1"
+                  jitterSpeed="1.0"/>
+        </Actions>
+      </ActionClip>
+      <ActionClip id="Dynamic Stretch" start="1600" length="800" colour="ffff0000"
+                  muted="0" palindrome="0" repetitions="1" easingEnabled="0" easeX1="0.3333333333333333"
+                  easeY1="0.3333333333333333" easeX2="0.6666666666666666" easeY2="0.6666666666666666"
+                  easePerRepetition="1" easePerDirection="1">
+        <Actions>
+          <Action actionType="4" timingType="3" value="2.0" startValue="1.0" useStartValue="1"
+                  jitterSpeed="1.0"/>
+        </Actions>
+      </ActionClip>
+    </ActionLayer>
+  </Timeline>
+  <Timeline>
+    <MovementLayer/>
+    <ActionLayer name=""/>
+  </Timeline>
+  <Timeline>
+    <MovementLayer/>
+    <ActionLayer name=""/>
+  </Timeline>
+  <Timeline>
+    <MovementLayer/>
+    <ActionLayer name=""/>
+  </Timeline>
+  <Timeline>
+    <MovementLayer/>
+    <ActionLayer name=""/>
+  </Timeline>
+</AnimatorTimelines>

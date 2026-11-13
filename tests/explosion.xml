@@ -1,0 +1,321 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<AnimatorTimelines>
+  <Timeline>
+    <MovementLayer>
+      <MovementClip id="Condensation: Move straight" start="0" length="5000" colour="ffe8a33d"
+                    muted="0" palindrome="0" repetitions="1" easingEnabled="1" easeX1="0.42"
+                    easeY1="0.0" easeX2="1.0" easeY2="1.0" easePerRepetition="1"
+                    easePerDirection="1" movementType="0" startPointGroupX="1.378858"
+                    startPointGroupY="1.378858" startPointGroupZ="0.0" targetPointGroupX="0.0"
+                    targetPointGroupY="0.0" targetPointGroupZ="0.0" useStartPoint="1"
+                    count="1.0" radiusChange="0.0" tension="0.0" closedPath="0" heightRise="0.0"
+                    freqRatioA="3.0" freqRatioB="2.0" phaseDeg="0.0" randomSeed="1"/>
+      <MovementClip id="Detonation: Rose" start="5000" length="2000" colour="ffe8a33d"
+                    muted="0" palindrome="0" repetitions="1" easingEnabled="1" easeX1="0.0"
+                    easeY1="0.0" easeX2="0.58" easeY2="1.0" easePerRepetition="1"
+                    easePerDirection="1" movementType="7" startPointGroupX="0.0"
+                    startPointGroupY="0.0" startPointGroupZ="0.0" targetPointGroupX="0.0"
+                    targetPointGroupY="0.0" targetPointGroupZ="0.0" useStartPoint="1"
+                    count="1.0" radiusChange="0.0" tension="0.0" closedPath="0" heightRise="0.0"
+                    freqRatioA="3.0" freqRatioB="2.0" phaseDeg="0.0" randomSeed="1"/>
+      <MovementClip id="Aftermath: Move in an arc" start="7000" length="9000" colour="ffe8a33d"
+                    muted="0" palindrome="0" repetitions="1" easingEnabled="1" easeX1="0.42"
+                    easeY1="0.0" easeX2="0.58" easeY2="1.0" easePerRepetition="1"
+                    easePerDirection="1" movementType="1" startPointGroupX="0.0"
+                    startPointGroupY="0.0" startPointGroupZ="0.0" targetPointGroupX="2.897777"
+                    targetPointGroupY="0.776457" targetPointGroupZ="0.0" useStartPoint="1"
+                    count="1.0" radiusChange="0.0" tension="0.0" closedPath="0" heightRise="0.0"
+                    freqRatioA="3.0" freqRatioB="2.0" phaseDeg="0.0" randomSeed="1"/>
+    </MovementLayer>
+    <ActionLayer name="">
+      <ActionClip id="Condensation: Width + Jitter" start="0" length="5000" colour="fff0c381"
+                  muted="0" palindrome="0" repetitions="1" easingEnabled="1" easeX1="0.42"
+                  easeY1="0.0" easeX2="1.0" easeY2="1.0" easePerRepetition="1"
+                  easePerDirection="1">
+        <Actions>
+          <Action actionType="4" timingType="1" value="0.2" startValue="1.0" useStartValue="1"
+                  jitterSpeed="1.0"/>
+          <Action actionType="5" timingType="1" value="0.08" startValue="0.0" useStartValue="0"
+                  jitterSpeed="4.0"/>
+        </Actions>
+      </ActionClip>
+      <ActionClip id="Detonation: Rotation + Width" start="5000" length="2000"
+                  colour="fff0c381" muted="0" palindrome="0" repetitions="1" easingEnabled="1"
+                  easeX1="0.0" easeY1="0.0" easeX2="0.58" easeY2="1.0" easePerRepetition="1"
+                  easePerDirection="1">
+        <Actions>
+          <Action actionType="3" timingType="1" value="360.0" startValue="0.0"
+                  useStartValue="1" jitterSpeed="1.0"/>
+          <Action actionType="4" timingType="1" value="2.0" startValue="0.2" useStartValue="1"
+                  jitterSpeed="1.0"/>
+        </Actions>
+      </ActionClip>
+      <ActionClip id="Aftermath: Width + Jitter" start="7000" length="9000" colour="fff0c381"
+                  muted="0" palindrome="0" repetitions="1" easingEnabled="1" easeX1="0.42"
+                  easeY1="0.0" easeX2="0.58" easeY2="1.0" easePerRepetition="1"
+                  easePerDirection="1">
+        <Actions>
+          <Action actionType="3" timingType="1" value="360.0" startValue="360.0"
+                  useStartValue="1" jitterSpeed="1.0"/>
+          <Action actionType="4" timingType="1" value="1.4" startValue="2.0" useStartValue="1"
+                  jitterSpeed="1.0"/>
+          <Action actionType="5" timingType="1" value="0.02" startValue="0.0" useStartValue="0"
+                  jitterSpeed="0.5"/>
+        </Actions>
+      </ActionClip>
+    </ActionLayer>
+  </Timeline>
+  <Timeline>
+    <MovementLayer>
+      <MovementClip id="Condensation: Move straight" start="0" length="5000" colour="ff5fb3d9"
+                    muted="0" palindrome="0" repetitions="1" easingEnabled="1" easeX1="0.42"
+                    easeY1="0.0" easeX2="1.0" easeY2="1.0" easePerRepetition="1"
+                    easePerDirection="1" movementType="0" startPointGroupX="1.378858"
+                    startPointGroupY="-1.378858" startPointGroupZ="0.0" targetPointGroupX="0.0"
+                    targetPointGroupY="0.0" targetPointGroupZ="0.0" useStartPoint="1"
+                    count="1.0" radiusChange="0.0" tension="0.0" closedPath="0" heightRise="0.0"
+                    freqRatioA="3.0" freqRatioB="2.0" phaseDeg="0.0" randomSeed="1"/>
+      <MovementClip id="Detonation: Move straight" start="5000" length="2000" colour="ff5fb3d9"
+                    muted="0" palindrome="0" repetitions="1" easingEnabled="1" easeX1="0.0"
+                    easeY1="0.0" easeX2="0.58" easeY2="1.0" easePerRepetition="1"
+                    easePerDirection="1" movementType="0" startPointGroupX="0.0"
+                    startPointGroupY="0.0" startPointGroupZ="0.0" targetPointGroupX="1.378858"
+                    targetPointGroupY="-1.378858" targetPointGroupZ="3.377499" useStartPoint="1"
+                    count="1.0" radiusChange="0.0" tension="0.0" closedPath="0" heightRise="0.0"
+                    freqRatioA="3.0" freqRatioB="2.0" phaseDeg="0.0" randomSeed="1"/>
+      <MovementClip id="Aftermath: Hold" start="7000" length="450" colour="ff53798a"
+                    muted="0" palindrome="0" repetitions="1" easingEnabled="0" easeX1="0.3333333333333333"
+                    easeY1="0.3333333333333333" easeX2="0.6666666666666666" easeY2="0.6666666666666666"
+                    easePerRepetition="1" easePerDirection="1" movementType="0" startPointGroupX="1.378858"
+                    startPointGroupY="-1.378858" startPointGroupZ="3.377499" targetPointGroupX="1.378858"
+                    targetPointGroupY="-1.378858" targetPointGroupZ="3.377499" useStartPoint="1"
+                    count="1.0" radiusChange="0.0" tension="0.0" closedPath="0" heightRise="0.0"
+                    freqRatioA="3.0" freqRatioB="2.0" phaseDeg="0.0" randomSeed="1"/>
+      <MovementClip id="Aftermath: Move in an arc" start="7450" length="8550" colour="ff5fb3d9"
+                    muted="0" palindrome="0" repetitions="1" easingEnabled="1" easeX1="0.42"
+                    easeY1="0.0" easeX2="0.58" easeY2="1.0" easePerRepetition="1"
+                    easePerDirection="1" movementType="1" startPointGroupX="1.378858"
+                    startPointGroupY="-1.378858" startPointGroupZ="3.377499" targetPointGroupX="2.897777"
+                    targetPointGroupY="-0.776457" targetPointGroupZ="0.0" useStartPoint="1"
+                    count="1.0" radiusChange="0.0" tension="0.0" closedPath="0" heightRise="0.0"
+                    freqRatioA="3.0" freqRatioB="2.0" phaseDeg="0.0" randomSeed="1"/>
+    </MovementLayer>
+    <ActionLayer name="">
+      <ActionClip id="Condensation: Width + Jitter" start="0" length="5000" colour="ff97cee6"
+                  muted="0" palindrome="0" repetitions="1" easingEnabled="1" easeX1="0.42"
+                  easeY1="0.0" easeX2="1.0" easeY2="1.0" easePerRepetition="1"
+                  easePerDirection="1">
+        <Actions>
+          <Action actionType="4" timingType="1" value="0.2" startValue="1.0" useStartValue="1"
+                  jitterSpeed="1.0"/>
+          <Action actionType="5" timingType="1" value="0.08" startValue="0.0" useStartValue="0"
+                  jitterSpeed="4.0"/>
+        </Actions>
+      </ActionClip>
+      <ActionClip id="Detonation: Rotation + Width" start="5000" length="2000"
+                  colour="ff97cee6" muted="0" palindrome="0" repetitions="1" easingEnabled="1"
+                  easeX1="0.0" easeY1="0.0" easeX2="0.58" easeY2="1.0" easePerRepetition="1"
+                  easePerDirection="1">
+        <Actions>
+          <Action actionType="3" timingType="1" value="-360.0" startValue="0.0"
+                  useStartValue="1" jitterSpeed="1.0"/>
+          <Action actionType="4" timingType="1" value="2.0" startValue="0.2" useStartValue="1"
+                  jitterSpeed="1.0"/>
+        </Actions>
+      </ActionClip>
+      <ActionClip id="Hold: Rotation + Width" start="7000" length="450" colour="ff97cee6"
+                  muted="0" palindrome="0" repetitions="1" easingEnabled="0" easeX1="0.3333333333333333"
+                  easeY1="0.3333333333333333" easeX2="0.6666666666666666" easeY2="0.6666666666666666"
+                  easePerRepetition="1" easePerDirection="1">
+        <Actions>
+          <Action actionType="3" timingType="1" value="-360.0" startValue="-360.0"
+                  useStartValue="1" jitterSpeed="1.0"/>
+          <Action actionType="4" timingType="1" value="2.0" startValue="2.0" useStartValue="1"
+                  jitterSpeed="1.0"/>
+        </Actions>
+      </ActionClip>
+      <ActionClip id="Aftermath: Width + Jitter" start="7450" length="8550" colour="ff97cee6"
+                  muted="0" palindrome="0" repetitions="1" easingEnabled="1" easeX1="0.42"
+                  easeY1="0.0" easeX2="0.58" easeY2="1.0" easePerRepetition="1"
+                  easePerDirection="1">
+        <Actions>
+          <Action actionType="3" timingType="1" value="-360.0" startValue="-360.0"
+                  useStartValue="1" jitterSpeed="1.0"/>
+          <Action actionType="4" timingType="1" value="1.4" startValue="2.0" useStartValue="1"
+                  jitterSpeed="1.0"/>
+          <Action actionType="5" timingType="1" value="0.02" startValue="0.0" useStartValue="0"
+                  jitterSpeed="0.5"/>
+        </Actions>
+      </ActionClip>
+    </ActionLayer>
+  </Timeline>
+  <Timeline>
+    <MovementLayer>
+      <MovementClip id="Condensation: Move straight" start="0" length="5000" colour="ffd9675f"
+                    muted="0" palindrome="0" repetitions="1" easingEnabled="1" easeX1="0.42"
+                    easeY1="0.0" easeX2="1.0" easeY2="1.0" easePerRepetition="1"
+                    easePerDirection="1" movementType="0" startPointGroupX="-1.378858"
+                    startPointGroupY="-1.378858" startPointGroupZ="0.0" targetPointGroupX="0.0"
+                    targetPointGroupY="0.0" targetPointGroupZ="0.0" useStartPoint="1"
+                    count="1.0" radiusChange="0.0" tension="0.0" closedPath="0" heightRise="0.0"
+                    freqRatioA="3.0" freqRatioB="2.0" phaseDeg="0.0" randomSeed="1"/>
+      <MovementClip id="Detonation: Move straight" start="5000" length="2000" colour="ffd9675f"
+                    muted="0" palindrome="0" repetitions="1" easingEnabled="1" easeX1="0.0"
+                    easeY1="0.0" easeX2="0.58" easeY2="1.0" easePerRepetition="1"
+                    easePerDirection="1" movementType="0" startPointGroupX="0.0"
+                    startPointGroupY="0.0" startPointGroupZ="0.0" targetPointGroupX="-2.591406"
+                    targetPointGroupY="-2.591406" targetPointGroupZ="-1.333879" useStartPoint="1"
+                    count="1.0" radiusChange="0.0" tension="0.0" closedPath="0" heightRise="0.0"
+                    freqRatioA="3.0" freqRatioB="2.0" phaseDeg="0.0" randomSeed="1"/>
+      <MovementClip id="Aftermath: Hold" start="7000" length="900" colour="ff8a5653"
+                    muted="0" palindrome="0" repetitions="1" easingEnabled="0" easeX1="0.3333333333333333"
+                    easeY1="0.3333333333333333" easeX2="0.6666666666666666" easeY2="0.6666666666666666"
+                    easePerRepetition="1" easePerDirection="1" movementType="0" startPointGroupX="-2.591406"
+                    startPointGroupY="-2.591406" startPointGroupZ="-1.333879" targetPointGroupX="-2.591406"
+                    targetPointGroupY="-2.591406" targetPointGroupZ="-1.333879" useStartPoint="1"
+                    count="1.0" radiusChange="0.0" tension="0.0" closedPath="0" heightRise="0.0"
+                    freqRatioA="3.0" freqRatioB="2.0" phaseDeg="0.0" randomSeed="1"/>
+      <MovementClip id="Aftermath: Move in an arc" start="7900" length="8100" colour="ffd9675f"
+                    muted="0" palindrome="0" repetitions="1" easingEnabled="1" easeX1="0.42"
+                    easeY1="0.0" easeX2="0.58" easeY2="1.0" easePerRepetition="1"
+                    easePerDirection="1" movementType="1" startPointGroupX="-2.591406"
+                    startPointGroupY="-2.591406" startPointGroupZ="-1.333879" targetPointGroupX="-2.897777"
+                    targetPointGroupY="-0.776457" targetPointGroupZ="0.0" useStartPoint="1"
+                    count="1.0" radiusChange="0.0" tension="0.0" closedPath="0" heightRise="0.0"
+                    freqRatioA="3.0" freqRatioB="2.0" phaseDeg="0.0" randomSeed="1"/>
+    </MovementLayer>
+    <ActionLayer name="">
+      <ActionClip id="Condensation: Width + Jitter" start="0" length="5000" colour="ffe69c97"
+                  muted="0" palindrome="0" repetitions="1" easingEnabled="1" easeX1="0.42"
+                  easeY1="0.0" easeX2="1.0" easeY2="1.0" easePerRepetition="1"
+                  easePerDirection="1">
+        <Actions>
+          <Action actionType="4" timingType="1" value="0.2" startValue="1.0" useStartValue="1"
+                  jitterSpeed="1.0"/>
+          <Action actionType="5" timingType="1" value="0.08" startValue="0.0" useStartValue="0"
+                  jitterSpeed="4.0"/>
+        </Actions>
+      </ActionClip>
+      <ActionClip id="Detonation: Rotation + Width" start="5000" length="2000"
+                  colour="ffe69c97" muted="0" palindrome="0" repetitions="1" easingEnabled="1"
+                  easeX1="0.0" easeY1="0.0" easeX2="0.58" easeY2="1.0" easePerRepetition="1"
+                  easePerDirection="1">
+        <Actions>
+          <Action actionType="3" timingType="1" value="360.0" startValue="0.0"
+                  useStartValue="1" jitterSpeed="1.0"/>
+          <Action actionType="4" timingType="1" value="2.0" startValue="0.2" useStartValue="1"
+                  jitterSpeed="1.0"/>
+        </Actions>
+      </ActionClip>
+      <ActionClip id="Hold: Rotation + Width" start="7000" length="900" colour="ffe69c97"
+                  muted="0" palindrome="0" repetitions="1" easingEnabled="0" easeX1="0.3333333333333333"
+                  easeY1="0.3333333333333333" easeX2="0.6666666666666666" easeY2="0.6666666666666666"
+                  easePerRepetition="1" easePerDirection="1">
+        <Actions>
+          <Action actionType="3" timingType="1" value="360.0" startValue="360.0"
+                  useStartValue="1" jitterSpeed="1.0"/>
+          <Action actionType="4" timingType="1" value="2.0" startValue="2.0" useStartValue="1"
+                  jitterSpeed="1.0"/>
+        </Actions>
+      </ActionClip>
+      <ActionClip id="Aftermath: Width + Jitter" start="7900" length="8100" colour="ffe69c97"
+                  muted="0" palindrome="0" repetitions="1" easingEnabled="1" easeX1="0.42"
+                  easeY1="0.0" easeX2="0.58" easeY2="1.0" easePerRepetition="1"
+                  easePerDirection="1">
+        <Actions>
+          <Action actionType="3" timingType="1" value="360.0" startValue="360.0"
+                  useStartValue="1" jitterSpeed="1.0"/>
+          <Action actionType="4" timingType="1" value="1.4" startValue="2.0" useStartValue="1"
+                  jitterSpeed="1.0"/>
+          <Action actionType="5" timingType="1" value="0.02" startValue="0.0" useStartValue="0"
+                  jitterSpeed="0.5"/>
+        </Actions>
+      </ActionClip>
+    </ActionLayer>
+  </Timeline>
+  <Timeline>
+    <MovementLayer>
+      <MovementClip id="Condensation: Move straight" start="0" length="5000" colour="ff7cc48a"
+                    muted="0" palindrome="0" repetitions="1" easingEnabled="1" easeX1="0.42"
+                    easeY1="0.0" easeX2="1.0" easeY2="1.0" easePerRepetition="1"
+                    easePerDirection="1" movementType="0" startPointGroupX="-1.378858"
+                    startPointGroupY="1.378858" startPointGroupZ="0.0" targetPointGroupX="0.0"
+                    targetPointGroupY="0.0" targetPointGroupZ="0.0" useStartPoint="1"
+                    count="1.0" radiusChange="0.0" tension="0.0" closedPath="0" heightRise="0.0"
+                    freqRatioA="3.0" freqRatioB="2.0" phaseDeg="0.0" randomSeed="1"/>
+      <MovementClip id="Detonation: Move straight" start="5000" length="2000" colour="ff7cc48a"
+                    muted="0" palindrome="0" repetitions="1" easingEnabled="1" easeX1="0.0"
+                    easeY1="0.0" easeX2="0.58" easeY2="1.0" easePerRepetition="1"
+                    easePerDirection="1" movementType="0" startPointGroupX="0.0"
+                    startPointGroupY="0.0" startPointGroupZ="0.0" targetPointGroupX="-2.388252"
+                    targetPointGroupY="2.388252" targetPointGroupZ="1.95" useStartPoint="1"
+                    count="1.0" radiusChange="0.0" tension="0.0" closedPath="0" heightRise="0.0"
+                    freqRatioA="3.0" freqRatioB="2.0" phaseDeg="0.0" randomSeed="1"/>
+      <MovementClip id="Aftermath: Hold" start="7000" length="1350" colour="ff608066"
+                    muted="0" palindrome="0" repetitions="1" easingEnabled="0" easeX1="0.3333333333333333"
+                    easeY1="0.3333333333333333" easeX2="0.6666666666666666" easeY2="0.6666666666666666"
+                    easePerRepetition="1" easePerDirection="1" movementType="0" startPointGroupX="-2.388252"
+                    startPointGroupY="2.388252" startPointGroupZ="1.95" targetPointGroupX="-2.388252"
+                    targetPointGroupY="2.388252" targetPointGroupZ="1.95" useStartPoint="1"
+                    count="1.0" radiusChange="0.0" tension="0.0" closedPath="0" heightRise="0.0"
+                    freqRatioA="3.0" freqRatioB="2.0" phaseDeg="0.0" randomSeed="1"/>
+      <MovementClip id="Aftermath: Move in an arc" start="8350" length="7650" colour="ff7cc48a"
+                    muted="0" palindrome="0" repetitions="1" easingEnabled="1" easeX1="0.42"
+                    easeY1="0.0" easeX2="0.58" easeY2="1.0" easePerRepetition="1"
+                    easePerDirection="1" movementType="1" startPointGroupX="-2.388252"
+                    startPointGroupY="2.388252" startPointGroupZ="1.95" targetPointGroupX="-2.897777"
+                    targetPointGroupY="0.776457" targetPointGroupZ="0.0" useStartPoint="1"
+                    count="1.0" radiusChange="0.0" tension="0.0" closedPath="0" heightRise="0.0"
+                    freqRatioA="3.0" freqRatioB="2.0" phaseDeg="0.0" randomSeed="1"/>
+    </MovementLayer>
+    <ActionLayer name="">
+      <ActionClip id="Condensation: Width + Jitter" start="0" length="5000" colour="ffaad9b3"
+                  muted="0" palindrome="0" repetitions="1" easingEnabled="1" easeX1="0.42"
+                  easeY1="0.0" easeX2="1.0" easeY2="1.0" easePerRepetition="1"
+                  easePerDirection="1">
+        <Actions>
+          <Action actionType="4" timingType="1" value="0.2" startValue="1.0" useStartValue="1"
+                  jitterSpeed="1.0"/>
+          <Action actionType="5" timingType="1" value="0.08" startValue="0.0" useStartValue="0"
+                  jitterSpeed="4.0"/>
+        </Actions>
+      </ActionClip>
+      <ActionClip id="Detonation: Rotation + Width" start="5000" length="2000"
+                  colour="ffaad9b3" muted="0" palindrome="0" repetitions="1" easingEnabled="1"
+                  easeX1="0.0" easeY1="0.0" easeX2="0.58" easeY2="1.0" easePerRepetition="1"
+                  easePerDirection="1">
+        <Actions>
+          <Action actionType="3" timingType="1" value="-360.0" startValue="0.0"
+                  useStartValue="1" jitterSpeed="1.0"/>
+          <Action actionType="4" timingType="1" value="2.0" startValue="0.2" useStartValue="1"
+                  jitterSpeed="1.0"/>
+        </Actions>
+      </ActionClip>
+      <ActionClip id="Hold: Rotation + Width" start="7000" length="1350" colour="ffaad9b3"
+                  muted="0" palindrome="0" repetitions="1" easingEnabled="0" easeX1="0.3333333333333333"
+                  easeY1="0.3333333333333333" easeX2="0.6666666666666666" easeY2="0.6666666666666666"
+                  easePerRepetition="1" easePerDirection="1">
+        <Actions>
+          <Action actionType="3" timingType="1" value="-360.0" startValue="-360.0"
+                  useStartValue="1" jitterSpeed="1.0"/>
+          <Action actionType="4" timingType="1" value="2.0" startValue="2.0" useStartValue="1"
+                  jitterSpeed="1.0"/>
+        </Actions>
+      </ActionClip>
+      <ActionClip id="Aftermath: Width + Jitter" start="8350" length="7650" colour="ffaad9b3"
+                  muted="0" palindrome="0" repetitions="1" easingEnabled="1" easeX1="0.42"
+                  easeY1="0.0" easeX2="0.58" easeY2="1.0" easePerRepetition="1"
+                  easePerDirection="1">
+        <Actions>
+          <Action actionType="3" timingType="1" value="-360.0" startValue="-360.0"
+                  useStartValue="1" jitterSpeed="1.0"/>
+          <Action actionType="4" timingType="1" value="1.4" startValue="2.0" useStartValue="1"
+                  jitterSpeed="1.0"/>
+          <Action actionType="5" timingType="1" value="0.02" startValue="0.0" useStartValue="0"
+                  jitterSpeed="0.5"/>
+        </Actions>
+      </ActionClip>
+    </ActionLayer>
+  </Timeline>
+</AnimatorTimelines>

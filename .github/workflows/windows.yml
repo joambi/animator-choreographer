@@ -1,0 +1,38 @@
+name: Windows-Build
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Konfigurieren (JUCE 8.0.12 per FetchContent, statische MSVC-Runtime)
+        run: cmake -B build -G "Visual Studio 17 2022" -A x64 -DCMAKE_MSVC_RUNTIME_LIBRARY=MultiThreaded
+
+      - name: Bauen
+        run: cmake --build build --config Release --parallel
+
+      - name: Tests
+        shell: pwsh
+        run: |
+          $t = Get-ChildItem -Recurse build -Filter ChoreoTests.exe | Select-Object -First 1
+          & $t.FullName build/test-out tests/data/test-gp.xml
+
+      - name: Installer bauen (Inno Setup)
+        shell: pwsh
+        run: |
+          $ver = (Select-String -Path CMakeLists.txt -Pattern 'project\(Raumchoreographie VERSION ([0-9.]+)').Matches[0].Groups[1].Value
+          iscc /DAppVersion=$ver installer\AnimatorChoreographer.iss
+          Compress-Archive -Path "build\Raumchoreographie_artefacts\Release\Animator Choreographer.exe" -DestinationPath dist\AnimatorChoreographer-portable.zip -Force
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: AnimatorChoreographer-Windows
+          path: |
+            dist/AnimatorChoreographer-*-Setup.exe
+            dist/AnimatorChoreographer-portable.zip

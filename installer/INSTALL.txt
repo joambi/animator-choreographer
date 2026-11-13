@@ -1,0 +1,17 @@
+ANIMATOR CHOREOGRAPHER – Installation
+
+DE
+1. install.command doppelklicken. Beim ersten Mal: Rechtsklick > Öffnen > Öffnen (macOS fragt nach, weil die Datei nicht signiert ist).
+2. Der Installer kopiert die App nach /Applications und das Skript nach
+   ~/Library/Application Support/REAPER/Scripts/Animator/
+3. In REAPER: Actions > Show action list > New action > Load ReaScript… und
+   Animator_export_regions_markers.lua wählen.
+4. Entfernen: uninstall.command doppelklicken.
+
+EN
+1. Double-click install.command. First time: right-click > Open > Open (macOS asks because the file is unsigned).
+2. The installer copies the app to /Applications and the script to
+   ~/Library/Application Support/REAPER/Scripts/Animator/
+3. In REAPER: Actions > Show action list > New action > Load ReaScript… and
+   choose Animator_export_regions_markers.lua.
+4. To remove: double-click uninstall.command.
