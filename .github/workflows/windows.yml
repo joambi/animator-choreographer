@@ -3,11 +3,20 @@ name: Windows-Build
 on:
   push:
   pull_request:
+  release:
+    types: [published]
   workflow_dispatch:
+    inputs:
+      release_tag:
+        description: "Dateien an dieses Release anhängen (z. B. v0.1.0, auch Entwurf); leer = nur bauen"
+        required: false
+        default: ""
 
 jobs:
   build:
     runs-on: windows-latest
+    permissions:
+      contents: write
     steps:
       - uses: actions/checkout@v4
 
@@ -23,16 +32,50 @@ jobs:
           $t = Get-ChildItem -Recurse build -Filter ChoreoTests.exe | Select-Object -First 1
           & $t.FullName build/test-out tests/data/test-gp.xml
 
-      - name: Installer bauen (Inno Setup)
+      - name: Installer und portables ZIP
         shell: pwsh
         run: |
           $ver = (Select-String -Path CMakeLists.txt -Pattern 'project\(Raumchoreographie VERSION ([0-9.]+)').Matches[0].Groups[1].Value
+          "VER=$ver" | Out-File -FilePath $env:GITHUB_ENV -Append -Encoding utf8
+          # Inno Setup liest die Lizenzdatei nur mit BOM als UTF-8 (Umlaute im Kopf)
+          $lic = Get-Content LICENSE -Raw -Encoding utf8
+          [IO.File]::WriteAllText("$PWD\LICENSE", $lic, [Text.UTF8Encoding]::new($true))
           iscc /DAppVersion=$ver installer\AnimatorChoreographer.iss
-          Compress-Archive -Path "build\Raumchoreographie_artefacts\Release\Animator Choreographer.exe" -DestinationPath dist\AnimatorChoreographer-portable.zip -Force
+          $p = "dist\Animator-Choreographer-$ver-Windows-portable"
+          New-Item -ItemType Directory -Force $p | Out-Null
+          Copy-Item "build\Raumchoreographie_artefacts\Release\Animator Choreographer.exe" $p
+          Copy-Item reaper\Animator_export_regions_markers.lua $p
+          Copy-Item LICENSE "$p\LICENSE.txt"
+          Compress-Archive -Path $p -DestinationPath "$p.zip" -Force
+          Get-ChildItem dist -File | ForEach-Object { "{0}  {1}" -f (Get-FileHash $_.FullName -Algorithm SHA256).Hash.ToLower(), $_.Name }
+
+      - name: Installer-Prüfung (stille Installation, Start, Deinstallation)
+        shell: pwsh
+        run: |
+          $setup = "dist\Animator-Choreographer-$env:VER-Windows-Setup.exe"
+          Start-Process $setup -ArgumentList '/VERYSILENT','/SUPPRESSMSGBOXES','/CURRENTUSER','/NORESTART','/TASKS=reaperscript' -Wait
+          $dir = "$env:LOCALAPPDATA\Programs\Animator Choreographer"
+          if (-not (Test-Path "$dir\Animator Choreographer.exe")) { throw "App nicht installiert: $dir" }
+          if (-not (Test-Path "$env:APPDATA\REAPER\Scripts\Animator\Animator_export_regions_markers.lua")) { throw "REAPER-Skript nicht installiert" }
+          $snap = "$PWD\win-check.png"
+          Start-Process "$dir\Animator Choreographer.exe" -ArgumentList '--snapshot',"`"$snap`"",'--step','5' -Wait
+          if (-not (Test-Path $snap) -or (Get-Item $snap).Length -eq 0) { throw "Snapshot fehlt" }
+          $un = Get-ChildItem $dir -Filter 'unins*.exe' | Select-Object -First 1
+          Start-Process $un.FullName -ArgumentList '/VERYSILENT','/SUPPRESSMSGBOXES','/NORESTART' -Wait
+          Start-Sleep -Seconds 3
+          if (Test-Path "$dir\Animator Choreographer.exe") { throw "Deinstallation unvollständig" }
 
       - uses: actions/upload-artifact@v4
         with:
           name: AnimatorChoreographer-Windows
           path: |
-            dist/AnimatorChoreographer-*-Setup.exe
-            dist/AnimatorChoreographer-portable.zip
+            dist/Animator-Choreographer-*-Windows-Setup.exe
+            dist/Animator-Choreographer-*-Windows-portable.zip
+
+      - name: An Release anhängen
+        if: github.event_name == 'release' || inputs.release_tag != ''
+        shell: pwsh
+        env:
+          GH_TOKEN: ${{ github.token }}
+          TAG: ${{ github.event.release.tag_name || inputs.release_tag }}
+        run: gh release upload $env:TAG "dist\Animator-Choreographer-$env:VER-Windows-Setup.exe" "dist\Animator-Choreographer-$env:VER-Windows-portable.zip" --clobber
