@@ -24,10 +24,11 @@ jobs:
 
       - name: App packen
         run: |
-          APP=$(find build -type d -name Raumchoreographie.app -path '*Release*' | head -1)
-          ditto -c -k --keepParent "$APP" Raumchoreographie-macOS.zip
+          APP=$(find build -type d -name 'Animator Choreographer.app' -path '*Release*' | head -1)
+          test -n "$APP"
+          ditto -c -k --keepParent "$APP" AnimatorChoreographer-macOS.zip
 
       - uses: actions/upload-artifact@v4
         with:
-          name: Raumchoreographie-macOS
-          path: Raumchoreographie-macOS.zip
+          name: AnimatorChoreographer-macOS
+          path: AnimatorChoreographer-macOS.zip

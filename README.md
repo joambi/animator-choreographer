@@ -24,7 +24,7 @@ The app is not signed. On first launch: right-click the app > Open, or
 
 ### GitHub Actions
 
-`.github/workflows/macos.yml` builds a universal app (arm64 + x86_64), runs the tests and stores `Raumchoreographie-macOS.zip` as an artifact.
+`.github/workflows/macos.yml` builds a universal app (arm64 + x86_64), runs the tests and stores `AnimatorChoreographer-macOS.zip` as an artifact.
 
 ## Usage
 
@@ -115,7 +115,7 @@ Die App ist nicht signiert. Beim ersten Start: Rechtsklick auf die App > Öffnen
 
 ### GitHub Actions
 
-`.github/workflows/macos.yml` baut eine Universal-App (arm64 + x86_64), führt die Tests aus und legt `Raumchoreographie-macOS.zip` als Artefakt ab.
+`.github/workflows/macos.yml` baut eine Universal-App (arm64 + x86_64), führt die Tests aus und legt `AnimatorChoreographer-macOS.zip` als Artefakt ab.
 
 ## Bedienung
 
