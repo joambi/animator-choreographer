@@ -19,7 +19,7 @@ cmake -B build -G Xcode -DJUCE_DIR=/path/to/JUCE
 
 The CMake target keeps its internal name `Raumchoreographie`; the app is built as `build/Raumchoreographie_artefacts/Release/Animator Choreographer.app`.
 
-The app is not signed. On first launch: right-click the app > Open, or
+The app is not signed. On macOS 15 and later: try to open it, then System Settings > Privacy & Security > Open Anyway; or
 `xattr -dr com.apple.quarantine "Animator Choreographer.app"`.
 
 ### GitHub Actions
@@ -80,6 +80,12 @@ On Linux without a display: `xvfb-run -a -s "-screen 0 1600x1000x24" ./Raumchore
 - The Animator import steps (`Import Scene…`, `Replace`, `Rescale`) were checked with the AmbiEncoder_64 in REAPER.
 - Plan files keep their internal German keys (e.g. `ruhen`, `kreis`, `"format":"raumchoreographie"`) for compatibility with files from the web app.
 
+## Author and authorship
+
+Developed by Johannes Schütt, ICST – Institute for Computer Music and Sound Technology, Zurich University of the Arts (ZHdK).
+
+Concept, design of the workflow, testing in REAPER and responsibility for the content: Johannes Schütt. Written with AI assistance: Claude (Anthropic) for code and documentation; Perplexity Computer for repository, CI (GitHub Actions), packaging and release notes. What has not been tested yet is listed under Limitations and in the release notes.
+
 ## Licenses
 
 - Code: GPLv3 (`LICENSE`), because headers from the ICST Ambisonics Plugins (GPLv3) are included: `third_party/icst`, tag 3.2.0.9, commit 27fd2f35c41b2ddd0d40f0df937d1410b71e781b.
@@ -110,7 +116,7 @@ cmake -B build -G Xcode -DJUCE_DIR=/pfad/zu/JUCE
 
 Der CMake-Target heisst intern weiter `Raumchoreographie`; die App liegt danach unter `build/Raumchoreographie_artefacts/Release/Animator Choreographer.app`.
 
-Die App ist nicht signiert. Beim ersten Start: Rechtsklick auf die App > Öffnen, oder
+Die App ist nicht signiert. Ab macOS 15: App öffnen, Meldung schliessen, dann Systemeinstellungen > Datenschutz & Sicherheit > Dennoch öffnen; oder
 `xattr -dr com.apple.quarantine "Animator Choreographer.app"`.
 
 ### GitHub Actions
@@ -171,6 +177,12 @@ Unter Linux ohne Bildschirm: `xvfb-run -a -s "-screen 0 1600x1000x24" ./Raumchor
 - Die Animator-Importschritte (`Import Scene…`, `Replace`, `Rescale`) wurden mit dem AmbiEncoder_64 in REAPER geprüft.
 - Plan-Dateien behalten ihre internen deutschen Schlüssel (z. B. `ruhen`, `kreis`, `"format":"raumchoreographie"`), damit Dateien der Web-App kompatibel bleiben.
 - Die Oberfläche ist englisch; die Dokumentation gibt es auf Deutsch und Englisch.
+
+## Autor und Entstehung
+
+Entwicklung: Johannes Schütt, ICST – Institute for Computer Music and Sound Technology, Zürcher Hochschule der Künste (ZHdK).
+
+Konzept, Gestaltung der Arbeitsschritte, Prüfung in REAPER und Verantwortung für den Inhalt: Johannes Schütt. Mit KI-Assistenz entstanden: Claude (Anthropic) bei Programmierung und Dokumentation; Perplexity Computer bei Repository, Build-Abläufen (GitHub Actions), Paketierung und Release-Text. Was noch nicht geprüft ist, steht unter „Grenzen“ und in den Release-Notizen.
 
 ## Lizenzen
 
