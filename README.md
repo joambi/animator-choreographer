@@ -26,6 +26,10 @@ The app is not signed. On macOS 15 and later: try to open it, then System Settin
 
 `.github/workflows/macos.yml` builds a universal app (arm64 + x86_64), runs the tests and stores `AnimatorChoreographer-macOS.zip` as an artifact.
 
+## Windows
+
+Files for Windows 10/11 (x64): `Animator-Choreographer-<version>-Windows-Setup.exe` installs for the current user without administrator rights (`%LOCALAPPDATA%\Programs\Animator Choreographer`) and optionally copies the REAPER script to `%APPDATA%\REAPER\Scripts\Animator`. `Animator-Choreographer-<version>-Windows-portable.zip` contains the program, the script and LICENSE. Both are unsigned: Windows SmartScreen shows a warning on first start (More info › Run anyway). `.github/workflows/windows.yml` builds both, tests silent installation, start and uninstallation, and attaches them to a release.
+
 ## Linux
 
 Packages for x86_64 (built on Ubuntu 22.04, glibc 2.35 or newer): `animator-choreographer_<version>_amd64.deb` and `animator-choreographer-<version>-linux-x86_64.tar.gz`.
@@ -134,6 +138,10 @@ Die App ist nicht signiert. Ab macOS 15: App öffnen, Meldung schliessen, dann S
 ### GitHub Actions
 
 `.github/workflows/macos.yml` baut eine Universal-App (arm64 + x86_64), führt die Tests aus und legt `AnimatorChoreographer-macOS.zip` als Artefakt ab.
+
+## Windows
+
+Dateien für Windows 10/11 (x64): `Animator-Choreographer-<version>-Windows-Setup.exe` installiert für den aktuellen Benutzer ohne Administratorrechte (`%LOCALAPPDATA%\Programs\Animator Choreographer`) und kopiert auf Wunsch das REAPER-Skript nach `%APPDATA%\REAPER\Scripts\Animator`. `Animator-Choreographer-<version>-Windows-portable.zip` enthält Programm, Skript und LICENSE. Beide sind nicht signiert: Windows SmartScreen warnt beim ersten Start (Weitere Informationen › Trotzdem ausführen). `.github/workflows/windows.yml` baut beides, prüft stille Installation, Start und Deinstallation und hängt die Dateien an ein Release an.
 
 ## Linux
 
